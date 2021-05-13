@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Txtpay package.
+ * This file is part of the Sevotransact package.
  *
  * (c) Prince Dorcis <princedorcis@gmail.com>
  *
@@ -39,7 +39,7 @@ class SlackLog
      */
     public static function log($message, $level = 'info')
     {
-        if (!($url = env('TXTPAY_SLACK_LOG_WEBHOOK', null)) || env('TXTPAY_SLACK_LOG_ENABLED', false) === false) {
+        if (!($url = env('SEVOTRANSACT_SLACK_LOG_WEBHOOK', null)) || env('SEVOTRANSACT_SLACK_LOG_ENABLED', false) === false) {
             return;
         }
 

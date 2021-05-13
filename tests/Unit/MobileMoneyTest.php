@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Txtpay package.
+ * This file is part of the Sevotransact package.
  *
  * (c) Prince Dorcis <princedorcis@gmail.com>
  *
@@ -19,13 +19,13 @@ use Prinx\Sevotransact\MobileMoney;
 class MobileMoneyTest extends TestCase
 {
     protected $defaultConfig = [
-        'TXTPAY_ID'                 => 'your_txtpay_id',
-        'TXTPAY_KEY'                => 'your_txtpay_key',
-        'TXTPAY_ACCOUNT'            => 'your_txtpay_account',
-        'TXTPAY_NICKNAME'           => 'your_txtpay_nickname',
-        'TXTPAY_DESCRIPTION'        => 'your_txtpay_description',
-        'TXTPAY_PRIMARY_CALLBACK'   => 'primary_callback',
-        'TXTPAY_SECONDARY_CALLBACK' => 'secondary_callback',
+        'SEVOTRANSACT_ID'                 => 'your_sevotransact_id',
+        'SEVOTRANSACT_KEY'                => 'your_sevotransact_key',
+        'SEVOTRANSACT_ACCOUNT'            => 'your_sevotransact_account',
+        'SEVOTRANSACT_NICKNAME'           => 'your_sevotransact_nickname',
+        'SEVOTRANSACT_DESCRIPTION'        => 'your_sevotransact_description',
+        'SEVOTRANSACT_PRIMARY_CALLBACK'   => 'primary_callback',
+        'SEVOTRANSACT_SECONDARY_CALLBACK' => 'secondary_callback',
     ];
 
     public function testAutoConfig()
@@ -80,13 +80,13 @@ class MobileMoneyTest extends TestCase
         $payment = new MobileMoney();
 
         $payment->configure();
-        $this->assertEquals($payment->getApiId(), env($prefix.'TXTPAY_ID'.$suffix));
-        $this->assertEquals($payment->getApiKey(), env($prefix.'TXTPAY_KEY'.$suffix));
-        $this->assertEquals($payment->getAccount(), env($prefix.'TXTPAY_ACCOUNT'.$suffix));
-        $this->assertEquals($payment->getNickname(), env($prefix.'TXTPAY_NICKNAME'.$suffix));
-        $this->assertEquals($payment->getDescription(), env($prefix.'TXTPAY_DESCRIPTION'.$suffix));
-        $this->assertEquals($payment->getPrimaryCallback(), env($prefix.'TXTPAY_PRIMARY_CALLBACK'.$suffix));
-        $this->assertEquals($payment->getSecondaryCallback(), env($prefix.'TXTPAY_SECONDARY_CALLBACK'.$suffix));
+        $this->assertEquals($payment->getApiId(), env($prefix.'SEVOTRANSACT_ID'.$suffix));
+        $this->assertEquals($payment->getApiKey(), env($prefix.'SEVOTRANSACT_KEY'.$suffix));
+        $this->assertEquals($payment->getAccount(), env($prefix.'SEVOTRANSACT_ACCOUNT'.$suffix));
+        $this->assertEquals($payment->getNickname(), env($prefix.'SEVOTRANSACT_NICKNAME'.$suffix));
+        $this->assertEquals($payment->getDescription(), env($prefix.'SEVOTRANSACT_DESCRIPTION'.$suffix));
+        $this->assertEquals($payment->getPrimaryCallback(), env($prefix.'SEVOTRANSACT_PRIMARY_CALLBACK'.$suffix));
+        $this->assertEquals($payment->getSecondaryCallback(), env($prefix.'SEVOTRANSACT_SECONDARY_CALLBACK'.$suffix));
     }
 
     public function fillenvWithConfig($prefix = '', $suffix = '')

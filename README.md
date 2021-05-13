@@ -535,7 +535,7 @@ If no folder has been set, a default log folder will be created at `YOUR_PROJECT
 You can disable local logs by using the env variable (It is enabled by default):
 
 ```ini
-TXTPAY_LOCAL_LOG_ENABLED=false
+SEVOTRANSACT_LOCAL_LOG_ENABLED=false
 ```
 
 #### Logging to SLACK
@@ -543,13 +543,13 @@ TXTPAY_LOCAL_LOG_ENABLED=false
 You can provide in your `.env` file a slack webhook to automatically log transactions to slack.
 
 ```ini
-TXTPAY_SLACK_LOG_WEBHOOK=https://
+SEVOTRANSACT_SLACK_LOG_WEBHOOK=https://
 ```
 
 You can disable logging to SLACK by putting in the `.env`:
 
 ```ini
-TXTPAY_SLACK_LOG_ENABLED=false
+SEVOTRANSACT_SLACK_LOG_ENABLED=false
 ```
 
 It is enabled by default.
@@ -559,7 +559,7 @@ It is enabled by default.
 To disable the whole logging system, put in your `.env` file:
 
 ```ini
-TXTPAY_LOG_ENABLED=false
+SEVOTRANSACT_LOG_ENABLED=false
 ```
 
 ## Contribute

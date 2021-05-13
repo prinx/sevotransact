@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Txtpay package.
+ * This file is part of the Sevotransact package.
  *
  * (c) Prince Dorcis <princedorcis@gmail.com>
  *

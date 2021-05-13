@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Txtpay package.
+ * This file is part of the Sevotransact package.
  *
  * (c) Prince Dorcis <princedorcis@gmail.com>
  *
@@ -67,13 +67,13 @@ class MobileMoney implements MobileMoneyInterface
         $prefix = $this->envCredententialsPrefix;
         $suffix = $this->envCredententialsSuffix;
 
-        $this->apiId = env($prefix.'TXTPAY_ID'.$suffix);
-        $this->apiKey = env($prefix.'TXTPAY_KEY'.$suffix);
-        $this->account = env($prefix.'TXTPAY_ACCOUNT'.$suffix);
-        $this->nickname = env($prefix.'TXTPAY_NICKNAME'.$suffix);
-        $this->description = env($prefix.'TXTPAY_DESCRIPTION'.$suffix);
-        $this->primaryCallback = env($prefix.'TXTPAY_PRIMARY_CALLBACK'.$suffix);
-        $this->secondaryCallback = env($prefix.'TXTPAY_SECONDARY_CALLBACK'.$suffix);
+        $this->apiId = env($prefix.'SEVOTRANSACT_ID'.$suffix);
+        $this->apiKey = env($prefix.'SEVOTRANSACT_KEY'.$suffix);
+        $this->account = env($prefix.'SEVOTRANSACT_ACCOUNT'.$suffix);
+        $this->nickname = env($prefix.'SEVOTRANSACT_NICKNAME'.$suffix);
+        $this->description = env($prefix.'SEVOTRANSACT_DESCRIPTION'.$suffix);
+        $this->primaryCallback = env($prefix.'SEVOTRANSACT_PRIMARY_CALLBACK'.$suffix);
+        $this->secondaryCallback = env($prefix.'SEVOTRANSACT_SECONDARY_CALLBACK'.$suffix);
 
         $vars = get_defined_vars();
 
@@ -180,8 +180,8 @@ class MobileMoney implements MobileMoneyInterface
         }
 
         $payload = [
-            'txtpay_api_id' => $this->apiId,
-            'txtpay_api_key' => $this->apiKey,
+            'sevotransact_api_id' => $this->apiId,
+            'sevotransact_api_key' => $this->apiKey,
         ];
 
         $response = $this->sendRequest($this->getTokenUrl(), $payload);
@@ -274,7 +274,7 @@ class MobileMoney implements MobileMoneyInterface
 
     public function log($data, $level = 'info')
     {
-        if (env('TXTPAY_LOG_ENABLED', null) === false) {
+        if (env('SEVOTRANSACT_LOG_ENABLED', null) === false) {
             return $this;
         }
 
@@ -284,7 +284,7 @@ class MobileMoney implements MobileMoneyInterface
 
         $logger = $this->getLogger();
 
-        if (env('TXTPAY_LOCAL_LOG_ENABLED', true) === false || is_null($logger) || method_exists($logger, $level)) {
+        if (env('SEVOTRANSACT_LOCAL_LOG_ENABLED', true) === false || is_null($logger) || method_exists($logger, $level)) {
             return $this;
         }
 
@@ -300,7 +300,7 @@ class MobileMoney implements MobileMoneyInterface
 
     public function getDefaultLogFile(): string
     {
-        return realpath(__DIR__.'/../../../').'/storage/logs/txtpay/mobile-money/transaction.log';
+        return realpath(__DIR__.'/../../../').'/storage/logs/sevotransact/mobile-money/transaction.log';
     }
 
     public function setLogFile(string $file)

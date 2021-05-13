@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the Txtpay package.
+ * This file is part of the Sevotransact package.
  *
  * (c) Prince Dorcis <princedorcis@gmail.com>
  *
@@ -478,13 +478,13 @@ class Callback implements CallbackInterface
 
     public function log(string $message, $file = '', $level = 'info')
     {
-        if (!$this->canLog || env('TXTPAY_LOG_ENABLED', null) === false) {
+        if (!$this->canLog || env('SEVOTRANSACT_LOG_ENABLED', null) === false) {
             return $this;
         }
 
         SlackLog::log($message, $level);
 
-        if (env('TXTPAY_LOCAL_LOG_ENABLED', true) === false || !$file || !$this->getLogger()) {
+        if (env('SEVOTRANSACT_LOCAL_LOG_ENABLED', true) === false || !$file || !$this->getLogger()) {
             return $this;
         }
 
@@ -557,7 +557,7 @@ class Callback implements CallbackInterface
     public function logFolder($append = '')
     {
         if (is_null($this->logFolder)) {
-            $this->logFolder = realpath(__DIR__.'/../../../').'/storage/logs/txtpay/mobile-money/callback/'.$append;
+            $this->logFolder = realpath(__DIR__.'/../../../').'/storage/logs/sevotransact/mobile-money/callback/'.$append;
         }
 
         return $this->logFolder;
