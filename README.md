@@ -34,7 +34,9 @@ SEVOTRANSACT_PRIMARY_CALLBACK=primary_callback
 SEVOTRANSACT_SECONDARY_CALLBACK=secondary_callback
 ```
 
-The primary and secondary callbacks are URL where `SEVOTRANSACT` will send the result of the transaction. YOu can check how to handle the transaction callback [here](#process-callback). The secondary callback is optional.
+The primary and secondary callbacks are URL where `SEVOTRANSACT` will send the result of the transaction. YOu can check how to handle the transaction callback [here](#process-callback).
+
+> The secondary callback is optional.
 
 ### Request a payment
 
