@@ -1,6 +1,6 @@
 {
-    "name": "prinx/txtpay",
-    "description": "TXTGHANA Payment Gateway SDK.",
+    "name": "prinx/sevotransact",
+    "description": "Sevotransact Payment Gateway SDK.",
     "type": "library",
     "license": "MIT",
     "minimum-stability": "stable",
@@ -21,7 +21,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Txtpay\\": "src"
+            "Prinx\\Sevotransact\\": "src"
         }
     },
     "autoload-dev": {
@@ -32,7 +32,7 @@
     "extra": {
         "laravel": {
             "providers" : [
-                "Txtpay\\Laravel\\ServiceProvider"
+                "Prinx\\Sevotransact\\Laravel\\ServiceProvider"
             ]
         }
     }

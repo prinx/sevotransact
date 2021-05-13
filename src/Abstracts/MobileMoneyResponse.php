@@ -9,7 +9,7 @@
  * that was distributed with this source code.
  */
 
-namespace Txtpay\Abstracts;
+namespace Prinx\Sevotransact\Abstracts;
 
 use Respect\Validation\Rules\ArrayType;
 use Respect\Validation\Rules\BoolType;
@@ -18,7 +18,7 @@ use Respect\Validation\Rules\Nullable;
 use Respect\Validation\Rules\Optional;
 use Respect\Validation\Rules\StringType;
 use Symfony\Contracts\HttpClient\ResponseInterface;
-use Txtpay\Contracts\MobileMoneyResponseInterface;
+use Prinx\Sevotransact\Contracts\MobileMoneyResponseInterface;
 
 abstract class MobileMoneyResponse implements MobileMoneyResponseInterface
 {

@@ -9,7 +9,7 @@
  * that was distributed with this source code.
  */
 
-namespace Txtpay\Support;
+namespace Prinx\Sevotransact\Support;
 
 class Combination
 {

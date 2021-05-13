@@ -9,7 +9,7 @@
  * that was distributed with this source code.
  */
 
-namespace Txtpay;
+namespace Prinx\Sevotransact;
 
 use Symfony\Contracts\HttpClient\ResponseInterface;
 

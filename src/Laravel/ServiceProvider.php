@@ -9,13 +9,13 @@
  * that was distributed with this source code.
  */
 
-namespace Txtpay\Laravel;
+namespace Prinx\Sevotransact\Laravel;
 
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
-use Txtpay\Callback;
-use Txtpay\Contracts\CallbackInterface;
-use Txtpay\Contracts\MobileMoneyInterface;
-use Txtpay\MobileMoney;
+use Prinx\Sevotransact\Callback;
+use Prinx\Sevotransact\Contracts\CallbackInterface;
+use Prinx\Sevotransact\Contracts\MobileMoneyInterface;
+use Prinx\Sevotransact\MobileMoney;
 
 class ServiceProvider extends BaseServiceProvider
 {

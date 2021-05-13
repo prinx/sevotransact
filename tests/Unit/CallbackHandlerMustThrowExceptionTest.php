@@ -12,10 +12,10 @@
 namespace Tests\Unit;
 
 use Tests\TestCase;
-use Txtpay\Callback;
-use Txtpay\Exceptions\InvalidCallbackHandlerException;
-use Txtpay\Helpers\Tests\CallbackHandlerMustThrowException;
-use Txtpay\MobileMoney;
+use Prinx\Sevotransact\Callback;
+use Prinx\Sevotransact\Exceptions\InvalidCallbackHandlerException;
+use Prinx\Sevotransact\Helpers\Tests\CallbackHandlerMustThrowException;
+use Prinx\Sevotransact\MobileMoney;
 
 class CallbackHandlerMustThrowExceptionTest extends TestCase
 {

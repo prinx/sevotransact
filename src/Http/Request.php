@@ -9,7 +9,7 @@
  * that was distributed with this source code.
  */
 
-namespace Txtpay\Http;
+namespace Prinx\Sevotransact\Http;
 
 use Symfony\Component\HttpFoundation\InputBag;
 use Symfony\Component\HttpFoundation\ParameterBag;

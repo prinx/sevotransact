@@ -12,9 +12,9 @@
 namespace Tests\Unit;
 
 use Tests\TestCase;
-use Txtpay\Callback;
-use Txtpay\Helpers\Tests\CallbackHandlerWithClosure;
-use Txtpay\MobileMoney;
+use Prinx\Sevotransact\Callback;
+use Prinx\Sevotransact\Helpers\Tests\CallbackHandlerWithClosure;
+use Prinx\Sevotransact\MobileMoney;
 
 class CallbackHandlerWithClosureTest extends TestCase
 {

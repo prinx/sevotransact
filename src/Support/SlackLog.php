@@ -9,7 +9,7 @@
  * that was distributed with this source code.
  */
 
-namespace Txtpay\Support;
+namespace Prinx\Sevotransact\Support;
 
 use function Prinx\Dotenv\env;
 use Symfony\Component\HttpClient\HttpClient;

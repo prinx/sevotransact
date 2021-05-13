@@ -9,16 +9,16 @@
  * that was distributed with this source code.
  */
 
-namespace Txtpay;
+namespace Prinx\Sevotransact;
 
 use Prinx\Notify\Log;
+use Prinx\Sevotransact\Contracts\MobileMoneyInterface;
+use Prinx\Sevotransact\Contracts\MobileMoneyResponseInterface;
+use Prinx\Sevotransact\Exceptions\TokenGenerationException;
+use Prinx\Sevotransact\Support\SlackLog;
 use Symfony\Component\HttpClient\HttpClient;
 use Symfony\Contracts\HttpClient\ResponseInterface;
 use Throwable;
-use Txtpay\Contracts\MobileMoneyInterface;
-use Txtpay\Contracts\MobileMoneyResponseInterface;
-use Txtpay\Exceptions\TokenGenerationException;
-use Txtpay\Support\SlackLog;
 use function Prinx\Dotenv\env;
 
 /**

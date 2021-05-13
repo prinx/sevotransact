@@ -9,7 +9,7 @@
  * that was distributed with this source code.
  */
 
-namespace Txtpay\Exceptions;
+namespace Prinx\Sevotransact\Exceptions;
 
 class TokenGenerationException extends \Exception
 {

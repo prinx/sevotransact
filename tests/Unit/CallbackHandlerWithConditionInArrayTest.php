@@ -12,9 +12,9 @@
 namespace Tests\Unit;
 
 use Tests\TestCase;
-use Txtpay\Callback;
-use Txtpay\Helpers\Tests\CallbackHandlerWithConditionInArray;
-use Txtpay\MobileMoney;
+use Prinx\Sevotransact\Callback;
+use Prinx\Sevotransact\Helpers\Tests\CallbackHandlerWithConditionInArray;
+use Prinx\Sevotransact\MobileMoney;
 
 class CallbackHandlerWithConditionInArrayTest extends TestCase
 {

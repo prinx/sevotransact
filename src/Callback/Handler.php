@@ -9,10 +9,10 @@
  * that was distributed with this source code.
  */
 
-namespace Txtpay\Callback;
+namespace Prinx\Sevotransact\Callback;
 
-use Txtpay\Callback;
-use Txtpay\Contracts\CallbackHandlerInterface;
+use Prinx\Sevotransact\Callback;
+use Prinx\Sevotransact\Contracts\CallbackHandlerInterface;
 
 class Handler implements CallbackHandlerInterface
 {

@@ -9,17 +9,17 @@
  * that was distributed with this source code.
  */
 
-namespace Txtpay;
+namespace Prinx\Sevotransact;
 
 use Prinx\Notify\Log;
-use Txtpay\Contracts\CallbackInterface;
-use Txtpay\Exceptions\CallbackClassNotFoundException;
-use Txtpay\Exceptions\InvalidCallbackClassException;
-use Txtpay\Exceptions\InvalidCallbackHandlerException;
-use Txtpay\Exceptions\InvalidPayloadKeyException;
-use Txtpay\Exceptions\UndefinedCallbackBagException;
-use Txtpay\Http\Request;
-use Txtpay\Support\SlackLog;
+use Prinx\Sevotransact\Contracts\CallbackInterface;
+use Prinx\Sevotransact\Exceptions\CallbackClassNotFoundException;
+use Prinx\Sevotransact\Exceptions\InvalidCallbackClassException;
+use Prinx\Sevotransact\Exceptions\InvalidCallbackHandlerException;
+use Prinx\Sevotransact\Exceptions\InvalidPayloadKeyException;
+use Prinx\Sevotransact\Exceptions\UndefinedCallbackBagException;
+use Prinx\Sevotransact\Http\Request;
+use Prinx\Sevotransact\Support\SlackLog;
 
 /**
  * TXTGHANA Payment Gateway SDK.

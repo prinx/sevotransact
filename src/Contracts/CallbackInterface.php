@@ -9,9 +9,7 @@
  * that was distributed with this source code.
  */
 
-namespace Txtpay\Contracts;
-
-use Closure;
+namespace Prinx\Sevotransact\Contracts;
 
 /**
  * CallbackInterface.
@@ -23,60 +21,60 @@ interface CallbackInterface
      *
      * @param string|array $conditions String or associative array matching the request parameters.
      *                                 If string, the parameter is the defaultConditionName.
-     * @param Closure      $callback
+     * @param callable      $callback
      *
      * @return $this
      */
-    public function on($conditions, Closure $callback);
+    public function on($conditions, callable $callback);
 
     /**
      * Register callback if the transaction is successful.
      *
      * The successful transaction is determined by the code of the request.
      *
-     * @param Closure $callback
+     * @param callable $callback
      *
      * @return $this
      */
-    public function success(Closure $callback);
+    public function success(callable $callback);
 
     /**
      * Run callback if the transaction has failed.
      *
      * The failed request is determined by the code of the request.
      *
-     * @param Closure $callback
+     * @param callable $callback
      *
      * @return $this
      */
-    public function failure(Closure $callback);
+    public function failure(callable $callback);
 
     /**
      * Run callback whether the transaction is successful or not.
      *
-     * @param Closure $callback
+     * @param callable $callback
      *
      * @return $this
      */
-    public function always(Closure $callback);
+    public function always(callable $callback);
 
     /**
      * Register callback.
      *
-     * @param Closure $callback
+     * @param callable $callback
      *
      * @return $this
      */
-    public function register(Closure $callback);
+    public function register(callable $callback);
 
     /**
      * Run the registered callbacks against the callback request.
      *
-     * @param Closure $callback Optional callback that will be run after all the callbacks have been run.
+     * @param callable $callback Optional callback that will be run after all the callbacks have been run.
      *
      * @return $this
      */
-    public function process(Closure $callback = null);
+    public function process(callable $callback = null);
 
     public function isSuccessful();
 

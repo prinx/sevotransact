@@ -9,10 +9,10 @@
  * that was distributed with this source code.
  */
 
-namespace Txtpay\Helpers\Tests;
+namespace Prinx\Sevotransact\Helpers\Tests;
 
-use Txtpay\Callback;
-use Txtpay\Contracts\CallbackHandlerInterface;
+use Prinx\Sevotransact\Callback;
+use Prinx\Sevotransact\Contracts\CallbackHandlerInterface;
 
 class CallbackHandlerWithCallbackInArray implements CallbackHandlerInterface
 {

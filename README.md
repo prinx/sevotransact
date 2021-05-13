@@ -1,47 +1,47 @@
-# TXTPAY PHP SDK
+# SEVOTRANSACT PHP SDK
 
 <p>
-<a href="https://travis-ci.org/prinx/txtpay-php"><img src="https://travis-ci.com/prinx/txtpay-php.svg?branch=main" alt="Build Status"></a>
-<a href="https://packagist.org/packages/prinx/txtpay-php"><img src="https://poser.pugx.org/prinx/txtpay/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/prinx/txtpay-php"><img src="https://poser.pugx.org/prinx/txtpay/license.svg" alt="License"></a>
+<a href="https://travis-ci.org/prinx/sevotransact"><img src="https://travis-ci.com/prinx/sevotransact.svg?branch=main" alt="Build Status"></a>
+<a href="https://packagist.org/packages/prinx/sevotransact"><img src="https://poser.pugx.org/prinx/sevotransact/v/stable.svg" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/prinx/sevotransact"><img src="https://poser.pugx.org/prinx/sevotransact/license.svg" alt="License"></a>
 </p>
 
-TXTGHANA Payment Gateway PHP SDK
+Sevotransact Payment Gateway PHP SDK
 
 ## Installation
 
 The package can be installed via composer. Install it if you don't have it yet. Then open a terminal in your project root folder and run:
 
 ```shell
-composer require prinx/txtpay
+composer require prinx/sevotransact
 ```
 
 ## Usage
 
 First create a `.env` file in your project root folder, if you don't have any already.
 
-Next, configure the .env by putting your txtpay credentials and account informations:
+Next, configure the .env by putting your sevotransact credentials and account informations:
 
 ```ini
 #...
 
-TXTPAY_ID=your_txtpay_id
-TXTPAY_KEY=your_txtpay_key
-TXTPAY_ACCOUNT=your_txtpay_account
-TXTPAY_NICKNAME=your_txtpay_nickname
-TXTPAY_DESCRIPTION=your_txtpay_description
-TXTPAY_PRIMARY_CALLBACK=primary_callback
-TXTPAY_SECONDARY_CALLBACK=secondary_callback
+SEVOTRANSACT_ID=your_sevotransact_id
+SEVOTRANSACT_KEY=your_sevotransact_key
+SEVOTRANSACT_ACCOUNT=your_sevotransact_account
+SEVOTRANSACT_NICKNAME=your_sevotransact_nickname
+SEVOTRANSACT_DESCRIPTION=your_sevotransact_description
+SEVOTRANSACT_PRIMARY_CALLBACK=primary_callback
+SEVOTRANSACT_SECONDARY_CALLBACK=secondary_callback
 ```
 
-The primary and secondary callbacks are URL where `TXTPAY` will send the result of the transaction. YOu can check how to handle the transaction callback [here](#process-callback). The secondary callback is optional.
+The primary and secondary callbacks are URL where `SEVOTRANSACT` will send the result of the transaction. YOu can check how to handle the transaction callback [here](#process-callback). The secondary callback is optional.
 
 ### Request a payment
 
 ```php
 require 'path/to/vendor/autoload.php'; // Not needed if using a framework.
 
-use Txtpay\MobileMoney;
+use Prinx\Sevotransact\MobileMoney;
 
 $payment = new MobileMoney;
 
@@ -100,7 +100,7 @@ Now you can create a callback instance that will receive the status of your tran
 
 require 'path/to/vendor/autoload.php';
 
-use Txtpay\Callback;
+use Prinx\Sevotransact\Callback;
 
 $callback = new Callback;
 ```
@@ -113,7 +113,7 @@ Or if you are using a framework and the callback route is handled by a controlle
 
 namespace Controllers;
 
-use Txtpay\Callback;
+use Prinx\Sevotransact\Callback;
 
 class MobileMoneyCallbackController extends Controller
 {
@@ -180,7 +180,7 @@ The `on` method is a powerful way of listening to the transaction request callba
 A string can be passed as condition, then it will be considered as the code sent in the payload to the callback URL.
 
 ```php
-use Txtpay\Callback;
+use Prinx\Sevotransact\Callback;
 
 $callback = new Callback;
 
@@ -530,7 +530,7 @@ You can provide a log folder where the transactions will be automatically logged
 $callback->setLogFolder($path);
 ```
 
-If no folder has been set, a default log folder will be created at `YOUR_PROJECT_ROOT_FOLDER/storage/logs/txtpay/`.
+If no folder has been set, a default log folder will be created at `YOUR_PROJECT_ROOT_FOLDER/storage/logs/sevotransact/`.
 
 You can disable local logs by using the env variable (It is enabled by default):
 
