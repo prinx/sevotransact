@@ -11,10 +11,10 @@
 
 namespace Tests\Unit;
 
-use Tests\TestCase;
 use Prinx\Sevotransact\Callback;
 use Prinx\Sevotransact\Helpers\Tests\CallbackHandlerWithClosure;
 use Prinx\Sevotransact\MobileMoney;
+use Tests\TestCase;
 
 class CallbackHandlerWithClosureTest extends TestCase
 {
@@ -22,7 +22,7 @@ class CallbackHandlerWithClosureTest extends TestCase
     {
         $this->loadEnv(realpath(__DIR__.'/../../').'/.env');
 
-        $id = (new MobileMoney)->getTransactionId();
+        $id = (new MobileMoney())->getTransactionId();
         $messages = Callback::getMessages(null, $id);
 
         $_POST = [
@@ -42,7 +42,7 @@ class CallbackHandlerWithClosureTest extends TestCase
 
             $_POST['code'] = $code;
 
-            $callback = new Callback;
+            $callback = new Callback();
             ob_start();
             $callback->process(CallbackHandlerWithClosure::class);
             $echoed = ob_get_clean();

@@ -95,8 +95,6 @@ class MobileMoney implements MobileMoneyInterface
      * @param string           $phone
      * @param string           $network
      * @param string           $voucherCode
-     *
-     * @return MobileMoneyResponseInterface
      */
     public function request(
         $amount = null,

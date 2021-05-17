@@ -21,7 +21,7 @@ interface CallbackInterface
      *
      * @param string|array $conditions String or associative array matching the request parameters.
      *                                 If string, the parameter is the defaultConditionName.
-     * @param callable      $callback
+     * @param callable     $callback
      *
      * @return $this
      */

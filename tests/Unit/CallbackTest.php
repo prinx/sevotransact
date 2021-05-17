@@ -22,7 +22,7 @@ class CallbackTest extends TestCase
     {
         $this->loadEnv(realpath(__DIR__.'/../../').'/.env');
 
-        $momoService = new MobileMoney;
+        $momoService = new MobileMoney();
         $payload = $_POST = [
             'code'              => '000',
             'status'            => 'test',
@@ -34,7 +34,7 @@ class CallbackTest extends TestCase
             'currency'          => 'GHS',
         ];
 
-        $callback = new Callback;
+        $callback = new Callback();
 
         $this->assertEquals($callback->getPayload('code'), $payload['code']);
         $this->assertEquals($callback->getPayload('code'), $callback->getCode());
@@ -63,7 +63,7 @@ class CallbackTest extends TestCase
 
     public function testMustRunProvidedCallbacksIfConditionsMatch()
     {
-        $id = (new MobileMoney)->getTransactionId();
+        $id = (new MobileMoney())->getTransactionId();
         $messages = Callback::getMessages(null, $id);
 
         $_POST = [
@@ -79,7 +79,7 @@ class CallbackTest extends TestCase
         foreach ($messages as $code => $expectedMessage) {
             $_POST['code'] = $code;
 
-            $callback = new Callback;
+            $callback = new Callback();
             $callback->on($code, $this->callbackFunction($code));
             $callback->success($this->callbackFunction($code));
 
