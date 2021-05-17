@@ -180,8 +180,8 @@ class MobileMoney implements MobileMoneyInterface
         }
 
         $payload = [
-            'sevotransact_api_id' => $this->apiId,
-            'sevotransact_api_key' => $this->apiKey,
+            'txtpay_api_id' => $this->apiId,
+            'txtpay_api_key' => $this->apiKey,
         ];
 
         $response = $this->sendRequest($this->getTokenUrl(), $payload);
