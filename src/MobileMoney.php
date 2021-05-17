@@ -226,11 +226,7 @@ class MobileMoney implements MobileMoneyInterface
     {
         $content = $response->getContent(false);
         $parsed = json_decode($content, true);
-        $error = $exception->getMessage();
-
-        if ($parsed && isset($parsed['status']) && $parsed['status'] === 400) {
-            $error = $parsed['message'] ?? $error;
-        }
+        $error = $parsed['message'] ?? $exception->getMessage();
 
         return [
             'isSuccessful' => false,
