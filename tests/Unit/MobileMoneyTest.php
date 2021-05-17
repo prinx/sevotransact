@@ -13,8 +13,8 @@ namespace Tests\Unit;
 
 use function Prinx\Dotenv\env;
 use function Prinx\Dotenv\persistEnv;
-use Tests\TestCase;
 use Prinx\Sevotransact\MobileMoney;
+use Tests\TestCase;
 
 class MobileMoneyTest extends TestCase
 {
