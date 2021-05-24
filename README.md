@@ -1,7 +1,7 @@
 <p align="center"><a href="https://sevotransact.com"><img src="https://sevotransact.com/eterna/assets/img/clients/logo.png"></a></p>
 
 <p align="center">
-<a href="https://travis-ci.org/prinx/sevotransact"><img src="https://travis-ci.com/prinx/sevotransact.svg?branch=main" alt="Build Status"></a>
+<a href="https://github.com/prinx/sevotransact/actions/workflows/tests.yml"><img src="https://github.com/prinx/sevotransact/actions/workflows/tests.yml/badge.svg" alt="Build Status"></a>
 <a href="https://packagist.org/packages/prinx/sevotransact"><img src="https://poser.pugx.org/prinx/sevotransact/v/stable.svg" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/prinx/sevotransact"><img src="https://poser.pugx.org/prinx/sevotransact/license.svg" alt="License"></a>
 <a href="https://github.styleci.io/repos/367089348?branch=main"><img src="https://github.styleci.io/repos/367089348/shield?style=flat&branch=main" alt="StyleCI"></a>
