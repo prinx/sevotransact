@@ -10,7 +10,7 @@
 # SEVOTRANSACT PHP SDK
 
 Sevotransact Payment Gateway PHP SDK
-<small>Can be used with your favorite framework or your plain PHP project.</small>
+<sub><sup>Can be used with your favorite framework or your plain PHP project.</sup></sub>
 
 ## Installation
 
