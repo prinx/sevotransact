@@ -570,7 +570,7 @@ SEVOTRANSACT_LOG_ENABLED=false
 
 ## Contribute
 
-Star :star: the repo, fork to add new features to the package and submit pull requests.
+Star :star: the repo, fork it, fix a bug, add a new feature, write tests, correct documentation, and submit a pull request.
 
 ## License
 
